@@ -1,0 +1,46 @@
+# Actions name:  
+name: Snake Game
+
+# Update time.
+on:
+  schedule:
+      # Updated every 6 hours..
+    - cron: "0 */6 * * *"
+
+# Allows you to execute in the Actions list (used for build tests).
+  workflow_dispatch:
+
+# Regras
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+
+    # Checks repo under $GITHUB_WORKSHOP, so your job can access it
+      - uses: actions/checkout@v2
+
+    # Repository that will be used to generate the files.
+      - uses: Platane/snk@master
+        id: snake-gif
+        with:
+          github_user_name: felipeofragoso
+          gif_out_path: dist/github-contribution-grid-snake.gif
+          svg_out_path: dist/github-contribution-grid-snake.svg
+
+      - run: git status
+
+      # For updates.
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: master
+          force: true
+
+      - uses: crazy-max/ghaction-github-pages@v2.1.3
+        with:
+          # the output branch we mentioned above
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
