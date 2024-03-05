@@ -11,7 +11,12 @@
 
 [![Linkedin](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/felipeofragoso/)
 
-![Fragoso GitHub stats](https://github-readme-stats.vercel.app/api?username=felipeofragoso&show_icons=true&theme=dracula)
+<a href="https://github.com/felipeofragoso">
+  <img height="170em" src="https://github-readme-stats.vercel.app/api?username=felipeofragoso&show_icons=true&theme=dracula&include_all_commits=true&count_private=true"/>
+  <img height="170em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=felipeofragoso&layout=compact&langs_count=16&theme=dracula"/> </a>
+</div>
+
+
 
 ## Tecnologias que uso no meu dia
 
